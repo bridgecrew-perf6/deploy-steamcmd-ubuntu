@@ -14,7 +14,7 @@ cd $HOME
 
 # install screen for persistent terminal sessions
 
-apt install screen
+apt -y install screen
 
 # make firewall configurations wit iptables
 
