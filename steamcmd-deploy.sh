@@ -9,6 +9,9 @@
 # and create user steam -- maybe this can be automated in the future, too
 # run with sudo privilege
 
+# let's go home first
+cd $HOME
+
 # install screen for persistent terminal sessions
 
 apt install screen
@@ -73,7 +76,7 @@ ip6tables-restore < v6
 #make iptables persistent through reboot
 echo 'making persistence for iptables'
 
-apt install iptables-persistent
+apt -y install iptables-persistent
 
 dpkg-reconfigure iptables-persistent
 
@@ -87,10 +90,10 @@ apt update
 
 # install required libraries
 echo 'installing additional required 32bit libraries'
-apt install lib32gcc1 lib32stdc++6 libc6-i386 libcurl4-gnutls-dev:i386 libsdl2-2.0-0:i386
+apt -y install lib32gcc1 lib32stdc++6 libc6-i386 libcurl4-gnutls-dev:i386 libsdl2-2.0-0:i386
 
 # install steamcmd
 echo 'now installing steamcmd'
-apt install steamcmd
+apt -y install steamcmd
 
 exit
